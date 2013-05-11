@@ -29,7 +29,7 @@
             // transition valuess
             animtype        : 'fade',
             animduration    : 450,      // length of transition
-            animspeed       : 4000,     // delay between transitions
+            animspeed       : 100000,     // delay between transitions
             automatic       : true,     // enable/disable automatic slide rotation
 
             // control and marker configuration
@@ -307,7 +307,7 @@
 
                     resize_complete(function(){
                         go(false,state.currentslide);
-                    }, 200, "some unique string");
+                    }, 500, "some unique string");
 
                 });
 
@@ -569,7 +569,7 @@
                 }
 
                 if (caption) {
-                    caption = $('<p class="bjqs-caption">' + caption + '</p>');
+                    caption = $('<div class="bjqs-caption"><p class="inner">' + caption + '</p></div>');
                     caption.appendTo($(slide));
                 }
 
